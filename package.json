@@ -1,0 +1,24 @@
+{
+  "name": "ragstack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:migrate": "dotenv -e .env -- prisma migrate dev --schema=packages/db/prisma/schema.prisma",
+    "db:generate": "dotenv -e .env -- prisma generate --schema=packages/db/prisma/schema.prisma",
+    "db:studio": "dotenv -e .env -- prisma studio --schema=packages/db/prisma/schema.prisma"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "dotenv-cli": "^9.0.0",
+    "turbo": "^2.5.5"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "npm@10.8.2"
+}

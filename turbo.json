@@ -1,0 +1,23 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "dev": {
+      "cache": false
+    },
+    "lint": {
+      "outputs": []
+    },
+    "format": {
+      "outputs": []
+    },
+    "db:generate": {
+      "outputs": ["packages/db/generated/**"]
+    },
+    "db:migrate": {
+      "outputs": ["packages/db/prisma/migrations/**"]
+    },
+    "db:reset": {
+      "outputs": []
+    }
+  }
+}
